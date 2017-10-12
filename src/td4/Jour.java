@@ -13,4 +13,9 @@ public class Jour {
     Integer Annee;
     Integer NumJ;
     
+    public Jour(Integer a, Integer n){
+        Annee=a;
+        NumJ=n;
+    }
+    
 }

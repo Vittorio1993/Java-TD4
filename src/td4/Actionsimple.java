@@ -18,13 +18,14 @@ public class Actionsimple extends Action{
         super(l);
         map = new HashMap<>();
     }
+    
 
-    Double setvaleur(Jour j) {
-        return map.get(j);
-    }
-      
+    public void setvaleur(Jour j, Double d) {
+        map.put(j,d);
+        
+    }    
     @Override
-    void getvaleur(Jour j) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public Double getvaleur(Jour j) {
+        return map.get(j);
     }
 }

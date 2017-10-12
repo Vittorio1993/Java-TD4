@@ -11,15 +11,34 @@ import java.util.ArrayList;
  * @author zhanghuakai
  */
 public class Actioncompose extends Action {
-     ArrayList<Actionsimple> lstas;
+    ArrayList<Composition> lstcom;
     public Actioncompose(String l) {
         super(l);
-        lstas=new ArrayList<>();
+        lstcom=new ArrayList<>();
+    }
+    
+    public void addcomposition(Composition com){
+        lstcom.add(com);
+        
     }
 
     @Override
-    void getvaleur(Jour j) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public Double getvaleur(Jour j) {
+        Double totalpour=0.0;
+        Double courcompose=0.0;
+        for(int i=0;i<lstcom.size();i++){
+                totalpour=totalpour+lstcom.get(i).get_pourcentage();
+                //System.out.println();
+                }
+        if(totalpour==1.0){
+            for(int k=0;k<lstcom.size();k++){
+                courcompose=courcompose+lstcom.get(k).get_as().getvaleur(j)*lstcom.get(k).get_pourcentage();
+            }
+        }
+        else{
+            System.out.println("Le total de pourcentage n'est pas 100%");
+        }
+         return courcompose;   
     }
     
 }

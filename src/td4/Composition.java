@@ -4,7 +4,6 @@
  * and open the template in the editor.
  */
 package td4;
-import java.util.ArrayList;
 
 /**
  *
@@ -12,12 +11,18 @@ import java.util.ArrayList;
  */
 public class Composition {
     private Double pourcentage;
-    private ArrayList<Composition> lstcomposition;
-    
-    
-    public Composition(Double p ){
-        lstcomposition=new ArrayList<>();
-        pourcentage=p;    
+    private Actionsimple as;
+  
+    public Composition(Double p, Actionsimple actions ){
+        pourcentage=p;  
+        as=actions;
     }
     
+    public Double get_pourcentage(){
+        return pourcentage;
+    }
+    
+    public Actionsimple get_as(){
+        return as;
+    }
 }

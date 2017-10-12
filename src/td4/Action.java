@@ -16,4 +16,13 @@ public class Action {
         Libelle=l;
     }
     
+    public Double getvaleur(Jour j){
+        return null;
+        
+    }
+    
+    public String get_libelle(){
+        return Libelle;
+    }
+    
 }
