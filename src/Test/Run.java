@@ -65,8 +65,8 @@ public class Run {
         N.afficher_lstporte();
         
         System.out.print("\n");
-        N.acheter(p2, as1, 50);
-        N.acheter(p2, as3, 150);
+        N.acheter("p1", "Total", 50);
+        N.acheter("p2", "AirFrance", 150);
         p2.afficher();
         System.out.print("\n");
         N.vendre(p1, ac1, 50);

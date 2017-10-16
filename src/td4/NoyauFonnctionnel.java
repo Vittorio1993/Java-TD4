@@ -42,8 +42,21 @@ public class NoyauFonnctionnel {
         
     }
     
-    public void acheter(Portefeuille p, Action a, Integer i){
+    public void acheter(String porte, String action, Integer i){
+        Portefeuille p = null;
+        Action a = null;
         Integer n;
+        for(Map.Entry<Integer,Portefeuille> entry:lstporte.entrySet()){
+            if(entry.getValue().get_libelle().equals(porte)){
+                p=entry.getValue();
+            } 
+        }
+        for(Map.Entry<Integer,Action> entry:lstaction.entrySet()){
+            if(entry.getValue().get_libelle().equals(action)){
+                a=entry.getValue();
+            } 
+        }
+        
         if (p.get_portefeuille().containsKey(a)){
             n=p.get_portefeuille().get(a)+i;
             p.set_portefeuille(a,n);
@@ -65,7 +78,7 @@ public class NoyauFonnctionnel {
              System.out.println("Il n'y a pas de cet action");
          }
     }
-     
+    
     
     
 }
