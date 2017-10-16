@@ -25,6 +25,9 @@ public class Run {
         Actionsimple as2=new Actionsimple("Airbus");
         as2.setvaleur(j1, 3.2);
         
+        Actionsimple as3=new Actionsimple("AirFrance");
+        as2.setvaleur(j1, 3.5);
+        
         System.out.println(as1.getvaleur(j1));
         System.out.println(as2.getvaleur(j1));
         
@@ -37,8 +40,8 @@ public class Run {
         
         System.out.println(ac1.getvaleur(j1));
         
-        Portefeuille p1=new Portefeuille();
-        Portefeuille p2=new Portefeuille();
+        Portefeuille p1=new Portefeuille("p1");
+        Portefeuille p2=new Portefeuille("p2");
         
         p1.set_portefeuille(ac1,100);
         p1.set_portefeuille(as1, 200);
@@ -48,20 +51,28 @@ public class Run {
         p1.afficher();
         p2.afficher();
         
-        
+        System.out.print("\n");
         NoyauFonnctionnel N=new NoyauFonnctionnel();
         N.set_lstaction(1, ac1);
         N.set_lstaction(2, as1);
-        N.set_lstaction(2, as2);
+        N.set_lstaction(3, as2);
+        N.set_lstaction(4, as3);
+        N.afficher_lstaction();
         
+        System.out.print("\n");
         N.set_lstporte(1, p1);
         N.set_lstporte(2, p2);
+        N.afficher_lstporte();
+        
+        System.out.print("\n");
+        N.acheter(p2, as1, 50);
+        N.acheter(p2, as3, 150);
+        p2.afficher();
+        System.out.print("\n");
+        N.vendre(p1, ac1, 50);
+        p1.afficher();
         
         
-        
-        
-        
-   
     }
     
 }

@@ -9,7 +9,7 @@ package td4;
  *
  * @author zhanghuakai
  */
-public class Action {
+abstract class Action {
     protected String Libelle;
     
     public Action(String l){

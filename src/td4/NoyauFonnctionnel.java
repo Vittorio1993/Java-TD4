@@ -5,6 +5,7 @@
  */
 package td4;
 import java.util.HashMap;
+import java.util.Map;
 /**
  *
  * @author zhanghuakai
@@ -22,12 +23,26 @@ public class NoyauFonnctionnel {
         lstporte.put(i, p);
     }
     
+    public void afficher_lstporte (){
+        for(Map.Entry<Integer,Portefeuille> entry:lstporte.entrySet()){
+            System.out.println(entry.getKey()+" "+entry.getValue().get_libelle());
+        }
+        
+    }
+    
     public void set_lstaction(Integer i, Action a){
         lstaction.put(i, a);
         
     }
     
-    public void achter(Portefeuille p, Action a, Integer i){
+     public void afficher_lstaction (){
+        for(Map.Entry<Integer,Action> entry:lstaction.entrySet()){
+            System.out.println(entry.getKey()+" "+entry.getValue().get_libelle());
+        }
+        
+    }
+    
+    public void acheter(Portefeuille p, Action a, Integer i){
         Integer n;
         if (p.get_portefeuille().containsKey(a)){
             n=p.get_portefeuille().get(a)+i;

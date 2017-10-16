@@ -12,10 +12,16 @@ import java.util.Map;
  * @author zhanghuakai
  */
 public class Portefeuille {
+    private String libelle;
     private HashMap<Action,Integer> portefeuille;
     
-    public Portefeuille(){
+    public Portefeuille(String s){
+        libelle=s;
         portefeuille=new HashMap();
+    }
+    
+    public String get_libelle(){
+        return libelle;
     }
     
     public void set_portefeuille(Action a,Integer i){
