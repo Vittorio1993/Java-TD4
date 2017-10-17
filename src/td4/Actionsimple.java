@@ -12,7 +12,7 @@ import java.util.HashMap;
  * @author zhanghuakai
  */
 public class Actionsimple extends Action{
-    HashMap<Jour, Double> map;
+    HashMap<String, Double> map;
    
     public Actionsimple(String l){
         super(l);
@@ -20,12 +20,17 @@ public class Actionsimple extends Action{
     }
     
 
-    public void setvaleur(Jour j, Double d) {
+    public void setvaleur(String j, Double d) {
         map.put(j,d);
         
     }    
+  
     @Override
-    public Double getvaleur(Jour j) {
+    public Double getvaleur(String j) {
         return map.get(j);
     }
+
+  
+    
+    
 }

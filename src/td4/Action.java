@@ -16,13 +16,14 @@ abstract class Action {
         Libelle=l;
     }
     
-    public Double getvaleur(Jour j){
-        return null;
-        
-    }
+    public abstract Double getvaleur(String j);
+       
+       
     
     public String get_libelle(){
         return Libelle;
     }
+    
+   
     
 }

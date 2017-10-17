@@ -23,7 +23,7 @@ public class Actioncompose extends Action {
     }
 
     @Override
-    public Double getvaleur(Jour j) {
+    public Double getvaleur(String j) {
         Double totalpour=0.0;
         Double courcompose=0.0;
         for(int i=0;i<lstcom.size();i++){
